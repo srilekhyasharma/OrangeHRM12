@@ -1,0 +1,116 @@
+
+
+
+TC01_Add_Nationaliy.xlsx ( ms office 2007,2010,2013,2016)
+TC01_Add_Nationaliy.xls  (MS office 97-2003)
+
+
+TC01_Add_Nationaliy.xlsx 
+
+//Step1 - .xlsx
+import java.io.FileInputStream;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+
+    	fis = new FileInputStream(xlFilePath);
+        workbook = new XSSFWorkbook(fis);
+        sheet = workbook.getSheet(sheetName);
+         row = sheet.getRow(rowNum);
+          cell = row.getCell(column);
+
+String str2=cell.getStringCellValue();
+----------------------------------------------------------
+
+//Step1 - .xls
+import java.io.FileInputStream;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+
+    	fis = new FileInputStream(xlFilePath);
+        workbook = new XSSFWorkbook(fis);
+        sheet = workbook.getSheet(sheetName);
+         row = sheet.getRow(rowNum);
+          cell = row.getCell(column);
+
+String str6=cell.getStringCellValue();
+---------------------------------------------------
+
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+
+
+fis = new FileInputStream(xlFilePath);
+        workbook = new XSSFWorkbook(fis);
+    	sheet = workbook.getSheet(sheetName);
+
+cell = sheet.getRow(rowNum).getCell(column);  
+    	cell.setCellValue(Text);
+
+
+fout= new FileOutputStream(xlFilePath);
+    	workbook.write(fout);
+     
+        fout.flush();
+        fout.close();
+        workbook.close();
+        fis.close();
+
+---------------------------------------------
+
+
+
+Login()
+AddNationalities()
+Logout()
+
+Login()
+AddNationalities()
+Logout()
+
+
+Login()
+AddNationalities()
+Logout()
+
+
+int iRow=0;
+
+@Test
+if(iRow==0)
+{
+	iRow=iRow+1;
+	Login()
+	AddNationalities()
+}
+else
+{
+iRow=iRow+1;
+AddNationalities()
+}
+
+
+AAfterTEst
+logout()
+
+
+
+
+
+
+
+
+
+
+
+
+
